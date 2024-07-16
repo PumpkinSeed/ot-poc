@@ -1,0 +1,267 @@
+| Incoming request
+|     POST localhost:4318/v1/traces
+|     --------------------
+|     Headers
+|         Content-Type [application/x-protobuf]
+|         Accept-Encoding [gzip]
+|         User-Agent [OTel OTLP Exporter Go/1.28.0]
+|         Content-Length [4157]
+|     --------------------
+|     Data
+|
+�
+�
+
+
+service.name
+ot-poc
+
+telemetry.sdk.language
+go
+%
+telemetry.sdk.name
+opentelemetry
+!
+telemetry.sdk.version
+1.28.0�
+G
+=go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp0.53.0�
+��K�V
+��Nu�+*/single09��/a��A<;��J
+
+http.method
+GETJ
+
+http.scheme
+httpJ
+net.host.name
+
+	localhostJ
+net.host.port�?J
+et.sock.peer.addr
+::1J�
+net.sock.peer.port�J+
+user_agent.original
+Go-http-client/1.1J
+
+http.target
+/singleJ
+net.protocol.version
+1.1J
+
+http.route
+/singleJ"
+http.response_content_lengthJ
+http.status_code�z��
+��K�V
+��Nu�+�����HTTP GET09��$a��Aٝ'a��J
+
+http.method
+GETJ*
+http.url
+http://localhost:8080/singleJ
+net.peer.name
+
+	localhostJ
+net.peer.port�?J
+http.status_code�J"
+http.response_content_lengthz��
+��K�V
+�Ș�@��}��t�x^�/��F
+                  (*/single09�l-'a��A��-a��J
+
+http.method
+GETJ
+
+http.scheme
+httpJ
+net.host.name
+
+	localhostJ
+net.host.port�?J
+et.sock.peer.addr
+::1J�
+net.sock.peer.port��J+
+user_agent.original
+Go-http-client/1.1J
+
+http.target
+/singleJ
+net.protocol.version
+1.1J
+
+http.route
+/singleJ"
+http.response_content_lengthJ
+http.status_code�z��
+��K�V
+�Ș�@��^�/��F
+            (�����HTTP GET09WE 'a��A�U�-a��J
+
+http.method
+GETJ*
+http.url
+http://localhost:8080/singleJ
+net.peer.name
+
+	localhostJ
+net.peer.port�?J
+http.status_code�J"
+http.response_content_lengthz��
+��K�V
+�Ș�@��g��a-�!��:4����*/single09�7�-a��A�~\4a��J
+
+http.method
+GETJ
+
+http.scheme
+httpJ
+net.host.name
+
+	localhostJ
+net.host.port�?J
+et.sock.peer.addr
+::1J�
+net.sock.peer.port��J+
+user_agent.original
+Go-http-client/1.1J
+
+http.target
+/singleJ
+net.protocol.version
+1.1J
+
+http.route
+/singleJ"
+http.response_content_lengthJ
+http.status_code�z��
+��K�V
+�Ș�@����:4���������HTTP GET09���-a��A��^4a��J
+
+http.method
+GETJ*
+http.url
+http://localhost:8080/singleJ
+net.peer.name
+
+	localhostJ
+net.peer.port�?J
+http.status_code�J"
+http.response_content_lengthz��
+��K�V
+l4a��A��:a��Jr^��J*/single096
+
+http.method
+GETJ
+
+http.scheme
+httpJ
+net.host.name
+
+	localhostJ
+net.host.port�?J
+et.sock.peer.addr
+::1J�
+net.sock.peer.port��J+
+user_agent.original
+Go-http-client/1.1J
+
+http.target
+/singleJ
+net.protocol.version
+1.1J
+
+http.route
+/singleJ"
+http.response_content_lengthJ
+http.status_code�z��
+��K�V
+�Ș�@���r^��J�����HTTP GET09J9`4a��A�Ӷ:a��J
+
+http.method
+GETJ*
+http.url
+http://localhost:8080/singleJ
+net.peer.name
+
+	localhostJ
+net.peer.port�?J
+http.status_code�J"
+http.response_content_lengthz��
+��K�V
+�Ș�@��Zz�
+         z�C�e��/�*/single09���:a��A	<�Aa��J
+
+http.method
+GETJ
+
+http.scheme
+httpJ
+net.host.name
+
+	localhostJ
+net.host.port�?J
+et.sock.peer.addr
+::1J�
+net.sock.peer.port��J+
+user_agent.original
+Go-http-client/1.1J
+
+http.target
+/singleJ
+net.protocol.version
+1.1J
+
+http.route
+/singleJ"
+http.response_content_lengthJ
+http.status_code�z��
+��K�V
+�Ș�@���e��/������HTTP GET09��:a��A���Aa��J
+
+http.method
+GETJ*
+http.url
+http://localhost:8080/singleJ
+net.peer.name
+
+	localhostJ
+net.peer.port�?J
+http.status_code�J"
+http.response_content_lengthz��
+��K�V
+�Ș�@����`�
+          ���*/multi09�a#a��A��Aa��J
+
+http.method
+GETJ
+
+http.scheme
+httpJ
+net.host.name
+
+	localhostJ
+net.host.port�?J
+et.sock.peer.addr
+::1J�
+net.sock.peer.portܪJ#
+user_agent.original
+
+
+curl/8.8.0J
+
+http.target
+/multiJ
+net.protocol.version
+1.1J
+
+http.route
+/multiJ"
+http.response_content_lengthJ
+http.status_code�z�o
+
+�github.com/guildxyz/ot-pocO
+��K�V
+�Ș�@���������`�
+               ���*
+                   subrequests09�h$a��A.��Aa��z��'https://opentelemetry.io/schemas/1.26.0

@@ -17,15 +17,17 @@ import (
 const scopeName = "github.com/guildxyz/ot-poc"
 
 var (
-	meter                = otel.Meter(scopeName)
-	tracer               = otel.Tracer(scopeName)
-	sleepHistogram       metric.Float64Histogram
-	subRequestsHistogram metric.Int64Histogram
+	meter                 = otel.Meter(scopeName)
+	tracer                = otel.Tracer(scopeName)
+	sleepHistogram        metric.Float64Histogram
+	subRequestsHistogram  metric.Int64Histogram
+	singleRequestsCounter metric.Int64Counter
 )
 
 func init() {
 	var err error
 
+	// prometheus/poc_sleep_duration_seconds/histogram
 	sleepHistogram, err = meter.Float64Histogram("poc.sleep.duration",
 		metric.WithDescription("Sample histogram to measure time spent in sleeping"),
 		metric.WithExplicitBucketBoundaries(0.05, 0.075, 0.1, 0.125, 0.150, 0.2),
@@ -34,10 +36,16 @@ func init() {
 		panic(err)
 	}
 
+	// prometheus/poc_subrequests/histogram
 	subRequestsHistogram, err = meter.Int64Histogram("poc.subrequests",
 		metric.WithDescription("Sample histogram to measure the number of subrequests made"),
 		metric.WithExplicitBucketBoundaries(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
 		metric.WithUnit("{request}"))
+	if err != nil {
+		panic(err)
+	}
+
+	singleRequestsCounter, err = meter.Int64Counter("poc.single.req.count")
 	if err != nil {
 		panic(err)
 	}
@@ -68,6 +76,10 @@ func (s server) single(w http.ResponseWriter, r *http.Request) {
 	hostValue := attribute.String("host.value", r.Host)
 	sleepHistogram.Record(r.Context(), sleepTime.Seconds(), metric.WithAttributes(hostValue))
 
+	singleRequestsCounter.Add(r.Context(), 1)
+
+	slog.InfoContext(r.Context(), "There is a single request", slog.String("sleep_time", sleepTime.String()))
+
 	fmt.Fprintf(w, "work completed in %v\n", sleepTime)
 }
 
@@ -91,7 +103,12 @@ func (s server) multi(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s server) callSingle(ctx context.Context) error {
-	res, err := otelhttp.Get(ctx, "http://localhost:8080/single")
+	req, err := http.NewRequestWithContext(ctx, "GET", "http://localhost:8080/single", nil)
+	if err != nil {
+		return err
+	}
+	// This DefaultClient adding the tracing to the next request
+	res, err := otelhttp.DefaultClient.Do(req)
 	if err != nil {
 		return err
 	}
