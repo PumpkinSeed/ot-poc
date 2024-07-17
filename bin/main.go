@@ -1,6 +1,6 @@
 package main
 
-import otpoc "gitlab.com/guildxyz/ot-poc"
+import otpoc "gitlab.com/PumpkinSeed/ot-poc"
 
 func main() {
 	otpoc.Run()

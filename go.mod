@@ -1,9 +1,9 @@
-module gitlab.com/guildxyz/ot-poc
+module gitlab.com/PumpkinSeed/ot-poc
 
 go 1.22.4
 
 require (
-	github.com/PumpkinSeed/slog-cloudlogging v0.1.2
+	github.com/PumpkinSeed/slog-cloudlogging v0.2.0
 	go.opentelemetry.io/contrib/exporters/autoexport v0.53.0
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.53.0
 	go.opentelemetry.io/contrib/propagators/autoprop v0.53.0
@@ -11,7 +11,6 @@ require (
 	go.opentelemetry.io/otel/metric v1.28.0
 	go.opentelemetry.io/otel/sdk v1.28.0
 	go.opentelemetry.io/otel/sdk/metric v1.28.0
-	go.opentelemetry.io/otel/trace v1.28.0
 )
 
 require (
@@ -55,6 +54,7 @@ require (
 	go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.28.0 // indirect
 	go.opentelemetry.io/otel/log v0.4.0 // indirect
 	go.opentelemetry.io/otel/sdk/log v0.4.0 // indirect
+	go.opentelemetry.io/otel/trace v1.28.0 // indirect
 	go.opentelemetry.io/proto/otlp v1.3.1 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	golang.org/x/crypto v0.24.0 // indirect

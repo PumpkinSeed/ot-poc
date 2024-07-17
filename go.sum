@@ -11,8 +11,8 @@ cloud.google.com/go/logging v1.8.1/go.mod h1:TJjR+SimHwuC8MZ9cjByQulAMgni+RkXeI3
 cloud.google.com/go/longrunning v0.5.0 h1:DK8BH0+hS+DIvc9a2TPnteUievsTCH4ORMAASSb7JcQ=
 cloud.google.com/go/longrunning v0.5.0/go.mod h1:0JNuqRShmscVAhIACGtskSAWtqtOoPkwP0YF1oVEchc=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
-github.com/PumpkinSeed/slog-cloudlogging v0.1.2 h1:vQjnpSgahvui8Dm0n0KyrssXoBq45tQsiEnIJNa1HmQ=
-github.com/PumpkinSeed/slog-cloudlogging v0.1.2/go.mod h1:cDWRWAnyvVm60ijwAFLBx7p59RosBLzY8+gx7X/BcU0=
+github.com/PumpkinSeed/slog-cloudlogging v0.2.0 h1:L6gB044kL51wbo6fpopGQjTMnry8X/QZC3ieyrPrGKU=
+github.com/PumpkinSeed/slog-cloudlogging v0.2.0/go.mod h1:CYPju9Ia1EqXFSBadtrSZFIK2IF+aM48iAMdickcvA8=
 github.com/antihax/optional v1.0.0/go.mod h1:uupD/76wgC+ih3iEmQUL+0Ugr19nfwCT1kdvxnR2qWY=
 github.com/beorn7/perks v1.0.1 h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=
 github.com/beorn7/perks v1.0.1/go.mod h1:G2ZrVWU2WbWT9wwq4/hrbKbnv/1ERSJQ0ibhJ6rlkpw=
